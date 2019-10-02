@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Oct 03 00:35:41 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Execution_Unit
+Top-level Entity Name : Execution_Unit
+Family : MAX V
+Device : 5M80ZM68C4
+Timing Models : Final
+Total logic elements : 34 / 80 ( 43 % )
+Total pins : 22 / 52 ( 42 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

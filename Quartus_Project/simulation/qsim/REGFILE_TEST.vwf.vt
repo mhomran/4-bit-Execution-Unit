@@ -1,0 +1,118 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/02/2019 23:38:15"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          REGFILE
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module REGFILE_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg [3:0] DATA;
+reg OP1_S0;
+reg OP1_S1;
+reg OP2_S0;
+reg OP2_S1;
+// wires                                               
+wire [3:0] REG1_DATA;
+wire [3:0] REG2_DATA;
+
+// assign statements (if any)                          
+REGFILE i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.DATA(DATA),
+	.OP1_S0(OP1_S0),
+	.OP1_S1(OP1_S1),
+	.OP2_S0(OP2_S0),
+	.OP2_S1(OP2_S1),
+	.REG1_DATA(REG1_DATA),
+	.REG2_DATA(REG2_DATA)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+// DATA[ 3 ]
+initial
+begin
+	DATA[3] = 1'b1;
+	DATA[3] = #40000 1'b0;
+end 
+// DATA[ 2 ]
+initial
+begin
+	DATA[2] = 1'b1;
+	DATA[2] = #40000 1'b0;
+end 
+// DATA[ 1 ]
+initial
+begin
+	DATA[1] = 1'b1;
+	DATA[1] = #40000 1'b0;
+end 
+// DATA[ 0 ]
+initial
+begin
+	DATA[0] = 1'b1;
+	DATA[0] = #40000 1'b0;
+end 
+
+// OP1_S0
+initial
+begin
+	OP1_S0 = 1'b0;
+end 
+
+// OP1_S1
+initial
+begin
+	OP1_S1 = 1'b0;
+	OP1_S1 = #20000 1'b1;
+	OP1_S1 = #10000 1'b0;
+end 
+
+// OP2_S0
+initial
+begin
+	OP2_S0 = 1'b0;
+end 
+
+// OP2_S1
+initial
+begin
+	OP2_S1 = 1'b1;
+	OP2_S1 = #10000 1'b0;
+end 
+endmodule
+
